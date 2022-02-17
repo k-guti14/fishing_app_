@@ -5,3 +5,34 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+password = "password"
+
+User.create!(
+  name: "test1",
+  introduction: "テストユーザー１",
+  email: "test1@example.com",
+  password: password,
+)
+
+User.create!(
+  name: "test2",
+  introduction: "テストユーザー2",
+  email: "test2@example.com",
+  password: password,
+)
+
+User.create!(
+  name: "test3",
+  introduction: "テストユーザー3",
+  email: "test3@example.com",
+  password: password,
+)
+
+User.create!(
+  name: "test4",
+  introduction: "テストユーザー4",
+  email: "test4@example.com",
+  password: password,
+)
+
+puts "ユーザーの初期データの投入に成功しました。"
