@@ -2,8 +2,13 @@ ja:
   activerecord:
     models:
       user: ユーザー
+      post: 投稿
     attributes:
       user:
         name: ユーザー名
         icon: アイコン
         introduction: 自己紹介
+      post:
+        post: 投稿
+        spot_name: 釣り場
+        content: 釣果内容
