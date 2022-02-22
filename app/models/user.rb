@@ -4,6 +4,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :rememberable, :validatable
+  
+  mount_uploader :icon, ImageUploader
 
   def self.guest
     find_or_create_by!(name: "ゲストユーザー", email: "guest@example.com") do |user|
