@@ -43,6 +43,11 @@ class ImageUploader < CarrierWave::Uploader::Base
     0..5.megabytes
   end
 
+  process convert: "jpg"
+
+  def filename
+    super.chomp(File.extname(super)) + ".jpg" if original_filename.present?
+  end
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
   # def filename
