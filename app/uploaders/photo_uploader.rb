@@ -44,6 +44,7 @@ class PhotoUploader < CarrierWave::Uploader::Base
   end
 
   process convert: "jpg"
+  process resize_to_limit: [640, 360]
 
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
